@@ -107,7 +107,7 @@ header,
 
 .articleContainer {
   counter-reset: articleCounter;
-  width: 1192px;
+  max-width: 1192px;
   flex-wrap: wrap;
   display: flex;
   /* margin: auto; */
@@ -296,3 +296,68 @@ article .articleInfo {
 .topNavButtonAnimated {
   animation: topNavBarButtonAnim 0.5s forwards;
 }
+
+@media screen and (max-width: 768px) {
+  .articleContainer address {
+    flex-basis: 48%;
+  }
+
+  .block2 {
+    flex-direction: column-reverse;
+  }
+
+  .sideNav {
+    max-width: 100%;
+    margin: 2em 0;
+  }
+  .sideNav h2 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .articleContainer2 {
+    max-width: 100%;
+  }
+
+  .padding {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navButtons li:nth-child(-n + 3) {
+    display: none;
+  }
+  .headerContainer svg {
+    display: none;
+  }
+
+  .articleContainer address {
+    flex-basis: 90%;
+  }
+
+  article img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes svgAnim {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .animatedSvg {
+  animation: svgAnim 0.5s 0.5s infinite;
+} */
